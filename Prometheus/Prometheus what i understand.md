@@ -37,14 +37,14 @@ scrape_configs: Tells prometheus where it should scrape from, targets that need 
 alertmanager.yml file:
 
 ```
-global:
-
-route:
-
-recievers:
-
-inhibit_rules:
-
-templates:
+- `global`: Default settings
+    
+- `route`: Traffic police for alerts
+    
+- `receivers`: The destinations
+    
+- `inhibit_rules`: Suppress noisy duplicates
+    
+- `templates`: Custom formatting for alerts
 
 ```

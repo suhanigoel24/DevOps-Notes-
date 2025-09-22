@@ -1380,8 +1380,6 @@ receivers:
 
 * * *
 
-&nbsp;
-
 # 🧠 systemctl start vs systemctl enable
 
 | Command | What It Does |
@@ -1601,10 +1599,6 @@ You can create your own targets to define custom system states (e.g., **monitori
     
 - Reload after edits: `sudo systemctl daemon-reload && sudo systemctl restart prometheus`
     
-
-&nbsp;
-
-&nbsp;
 
 * * *
 
