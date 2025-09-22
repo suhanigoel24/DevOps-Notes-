@@ -1080,8 +1080,7 @@ global:
     
 
 * * *
-
-Got it 👍 Let’s make this crystal clear and structured for you, Raushan. I’ll break it into **4 parts**: Receiver Types, Top-Level Routing, Nested Routes, and End-to-End Flow.
+I’ll break it into **4 parts**: Receiver Types, Top-Level Routing, Nested Routes, and End-to-End Flow.
 
 * * *
 

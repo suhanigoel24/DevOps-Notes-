@@ -8,49 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d5cead5298bd41d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Prometheus/Prometheus Configuration.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Prometheus Configuration"
-            }
-          },
-          {
             "id": "ceb7d1f1ba27533d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Prometheus what i understand.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Prometheus what i understand"
-            }
-          },
-          {
-            "id": "b1d72bb3e5139b81",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Prometheus/Introduction, Working and Architecture.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Introduction, Working and Architecture"
-            }
-          },
-          {
-            "id": "f09698e4778bc5dd",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -135,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "1e389a11e5bad2ea",
@@ -226,13 +185,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "ceb7d1f1ba27533d",
+  "active": "4895ff49ad8b98b3",
   "lastOpenFiles": [
-    "Prometheus/Prometheus rules.md",
     "Prometheus what i understand.md",
     "Prometheus/Prometheus and alertmanager.md",
     "Prometheus/Introduction, Working and Architecture.md",
     "Prometheus/Prometheus Configuration.md",
+    "Prometheus/Prometheus rules.md",
     "Telegraph.md",
     "Untitled 3",
     "Screenshot 2025-09-15 at 5.09.52 PM.png",

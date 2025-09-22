@@ -22,3 +22,29 @@ groups:
 		  app:
 ```
 
+While we are at it let us also discuss the basic structure if prometheus.yml file:
+
+```
+global: When and at what time interval the scrape should happen
+
+alerting: links the prometheus.yml to the alert files where the alerts are written
+
+rule_files: here the rules for the alerts are written
+
+scrape_configs: Tells prometheus where it should scrape from, targets that need to be scraped to get the metrics
+```
+
+alertmanager.yml file:
+
+```
+global:
+
+route:
+
+recievers:
+
+inhibit_rules:
+
+templates:
+
+```
