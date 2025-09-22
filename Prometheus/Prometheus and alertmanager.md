@@ -140,7 +140,6 @@ Instead of calculating CPU usage every time in a dashboard or alert, Prometheus 
 4.  Add Node Exporter target in Prometheus config.
     
 5.  Use **recording rules** to precompute metrics (like CPU usage).
-    
 
 * * *
 

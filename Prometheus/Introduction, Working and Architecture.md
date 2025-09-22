@@ -43,7 +43,7 @@ Prometheus is an **open-source monitoring tool** that:
 - Enable automated alerts when something goes wrong.
 
 
-It collects metrics by scraping the http endpoints of the targets which are configured(bare metal servers, db instance, kubernetes cluster, an application exposing metrics etc.) Along with Alertmanager, prometheus works as a monitoring and alerting tool.
+**It collects metrics by scraping the HTTP endpoints of the targets which are configured(bare metal servers, db instance, kubernetes cluster, an application exposing metrics etc). Along with Alertmanager, prometheus works as a monitoring and alerting tool.**
 
 ## PROMETHEUS WORKING AND ARCHITECTURE
 
