@@ -173,19 +173,97 @@ Run this, and **all servers in `webservers` will have Nginx installed automatica
     
 5. Works on hosts whether they’re on **private/public clouds** or physical machines.
    
+   ## Ansible Architecture
+
+1. **Control Node (Management Node)**
+    
+    - Where Ansible is installed.
+        
+    - Users create **playbooks** and **inventory** here.
+        
+    - This node executes all automation.
+        
+2. **Inventory**
+    
+    - File listing the servers (hosts) Ansible manages.
+        
+    - Example:
+```
+[dbservers]
+192.168.1.10
+192.168.1.11
+
+[webservers]
+web01.example.com
+web02.example.com
+
+```
+        
+        
+        
+    - You can group hosts (`dbservers`, `webservers`) for easier targeting.
+        
+    - Can also store **credentials** (usernames, passwords, SSH keys).
+        
+3. **Playbooks**
+    
+    - YAML files containing automation instructions.
+        
+    - End with `.yml`.
+        
+    - Structure:
+        
+        - Start with `---` (YAML syntax).
+            
+        - **Play** → A set of tasks to run on defined hosts.
+            
+        - **Tasks** → Actions to be done (like install a package).
+            
+        - **Variables** → Define values (like port numbers) so they can be reused.
+            
+        - **Handlers** → Special tasks triggered only if something changes.
+            
+    - Example:
+        
+```
+ - name: Install Apache on webservers
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Ensure Apache is installed
+      apt:
+        name: apache2
+        state: present
+
+```
+        
+4. **Modules**
+    
+    - Small programs Ansible uses to perform tasks.
+        
+    - Example: `apt`, `yum`, `service`, `user`, `copy`.
+        
+    - Thousands of modules exist.
+        
+5. **Handlers**
+    
+    - Triggered after certain tasks.
+        
+    - Example: Restart Apache only if the config file changes.
+   
    ## Features and Capabilities
 
-1. **Automation Anywhere**
+6. **Automation Anywhere**
     
     - Can automate almost anything if you know the right **modules** and **plugins**.
         
     - You can also build **custom plugins/modules** if something isn’t already available.
         
-2. **System Configuration**
+7. **System Configuration**
     
     - Supports OS-level configuration, apps, DBs, network devices, firewalls, etc.
         
-3. **Software Deployment**
+8. **Software Deployment**
     
     - Install packages.
         
@@ -193,7 +271,7 @@ Run this, and **all servers in `webservers` will have Nginx installed automatica
         
     - Set defaults and enforce consistency.
         
-4. **Orchestration**
+9. **Orchestration**
     
     - Run multiple tasks in sequence.
         
@@ -266,3 +344,198 @@ Run this, and **all servers in `webservers` will have Nginx installed automatica
     - You can see and audit the code.
         
     - Scan with security tools if needed.
+
+### Ansible playbook line by line
+
+```
+---
+- name: Configure Web Servers
+  hosts: web_servers
+  gather_facts: yes
+  vars:
+    web_server_port: 80
+
+  tasks:
+    - name: Ensure Apache is installed (Debian)
+      become: yes
+      apt:
+        name: apache2
+        state: present
+      when: ansible_facts['ansible_os_family'] == 'Debian'
+      notify: Restart Apache (Debian)
+
+- name: Ensure Apache is listening on port {{ web_server_port }}
+      become: yes
+      lineinfile:
+        path: /etc/apache2/ports.conf
+        line: Listen {{ web_server_port }}
+      when: ansible_facts['ansible_os_family'] == 'Debian'
+
+  handlers:
+    - name: Restart Apache (Debian)
+      become: yes
+      service:
+        name: apache2
+        state: restarted
+
+```
+
+
+### Header
+
+`---`
+
+- Marks the beginning of a YAML file.
+    
+- Standard in Ansible playbooks.
+    
+
+---
+
+### 🔹 Play Definition
+
+`- name: Configure Web Servers`
+
+- Defines the **play** (a set of tasks).
+    
+- This play is called **“Configure Web Servers”**.
+    
+
+  `hosts: web_servers`
+
+- Target group of hosts is **`web_servers`** (defined in the inventory file).
+    
+- All tasks under this play will run on those hosts.
+    
+
+  `gather_facts: yes`
+
+- Tells Ansible to collect **facts** (system information like OS, IP, CPU, etc.).
+    
+- Useful for conditional tasks (e.g., run only if Debian).
+    
+
+ 
+  ```vars:     web_server_port: 80```
+  
+
+- Defines a **variable** `web_server_port` with value **80**.
+    
+- This avoids hardcoding values and makes the playbook reusable.
+    
+
+---
+
+### 🔹 Tasks Section
+
+  `tasks:`
+
+- All tasks to be executed on the target hosts go here.
+    
+
+---
+
+#### **Task 1: Install Apache**
+
+    `- name: Ensure Apache is installed (Debian)       become: yes`
+
+- Task name for readability: install Apache on Debian.
+    
+- `become: yes` → run as **root (sudo)**, since installing packages needs admin rights.
+    
+
+      `apt:         name: apache2         state: present`
+
+- Uses the **`apt` module** (package manager for Debian/Ubuntu).
+    
+- Ensures package **apache2** is installed.
+    
+- `state: present` → install if not already installed.
+    
+
+      `when: ansible_facts['ansible_os_family'] == 'Debian'`
+
+- Conditional execution.
+    
+- Task runs **only if the target OS family is Debian**.
+    
+
+      `notify: Restart Apache (Debian)`
+
+- Triggers a **handler** named "Restart Apache (Debian)" **if this task makes changes** (e.g., if Apache was installed).
+    
+- If no change, the handler won’t run.
+    
+
+---
+
+#### **Task 2: Configure Apache Port**
+
+    `- name: Ensure Apache is listening on port {{ web_server_port }}       become: yes`
+
+- Ensures Apache is listening on the port defined in the variable (`80`).
+    
+- Again uses **sudo privileges**.
+    
+
+      `lineinfile:         path: /etc/apache2/ports.conf         line: Listen {{ web_server_port }}`
+
+- Uses the **`lineinfile` module** to edit files.
+    
+- Ensures `/etc/apache2/ports.conf` contains the line:
+    
+    `Listen 80`
+    
+- If line already exists → no changes made (idempotency).
+    
+- If not → line will be added.
+    
+
+      `when: ansible_facts['ansible_os_family'] == 'Debian'`
+
+- Runs only on Debian-based systems.
+    
+
+---
+
+### 🔹 Handlers Section
+
+  `handlers:     - name: Restart Apache (Debian)       become: yes       service:         name: apache2         state: restarted`
+
+- Defines a **handler** named "Restart Apache (Debian)".
+    
+- Handlers run only when **notified** by tasks.
+    
+- Uses the **`service` module**:
+    
+    - Restarts the `apache2` service if triggered.
+        
+- `become: yes` → requires root privileges.
+    
+
+---
+
+## ✅ Flow of this Playbook
+
+1. Gather facts about the system.
+    
+2. Check if host OS is Debian:
+    
+    - If yes → install Apache (`apache2`).
+        
+    - If Apache was installed → notify handler to restart it.
+        
+3. Ensure Apache is listening on port `80` by editing `/etc/apache2/ports.conf`.
+    
+4. If either task changes something, the handler will **restart Apache**.
+    
+
+---
+
+⚡In short:
+
+- This playbook installs Apache (if missing), ensures it listens on port 80, and restarts it if necessary.
+    
+- Runs only on **Debian-based systems**.
+    
+- Uses variables, conditionals, and handlers → making it modular, reusable, and safe.
