@@ -301,3 +301,132 @@ Ansible “facts” are like **system fingerprints** that Ansible collects autom
 5. Add conditions (`when`) to handle OS differences.
     
 6. Store & reuse output for reporting or automation.
+   
+## Flow of Concepts Learned in Loops in Ansible
+
+8. **What are loops?**
+    
+    - Like in programming, loops let you **repeat tasks** multiple times for different items.
+        
+    - Example: Install multiple software packages, or print a list of fruits.
+        
+
+---
+
+2. **Creating a Playbook**
+    
+    - Write a YAML playbook (e.g., `loops_demo.yml`).
+        
+    - Define:
+        
+        - Play name
+            
+        - Target server (`hosts`)
+            
+        - Disable gather facts (optional for faster runs)
+            
+        - Tasks section
+            
+
+---
+
+3. **Basic Loop Syntax**
+    
+    - Use `loop:` keyword inside a task.
+        
+    - Example:
+```
+- name: Print software names
+  debug:
+    msg: "This is software {{ item }}"
+  loop:
+    - wget
+    - apache2
+    - telnet
+
+```
+        
+    - Here, Ansible loops over the list and substitutes each `item`.
+        
+
+---
+
+4. **Using Variables in Loops**
+    
+    - Instead of hardcoding the list, define variables in the playbook:
+        
+```
+vars:
+  fruits:
+    - apple
+    - orange
+    - mango
+
+```
+        
+    - Then use:
+        
+        `loop: "{{ fruits }}"`
+        
+
+---
+
+5. **Loop Control (Extra Features)**
+    
+    - You can customize how loops behave:
+        
+        **a) Index Variable** → Track position (0,1,2…)
+        
+```
+loop_control:
+  index_var: index
+
+```
+        
+        Example output:  
+        `Apple is at index 0, Orange at index 1`
+        
+        **b) Custom Loop Variable Name**  
+        Instead of the generic `item`, use your own:
+        
+```
+loop_control:
+  loop_var: fruit
+
+```
+        
+        Now you can write `{{ fruit }}` instead of `{{ item }}`.
+        
+        **c) Custom Labels in Output**
+        
+        - Change how loop results are displayed:
+            
+        
+```
+loop_control:
+  label: "{{ index }}"
+
+```
+        
+        Output becomes:  
+        `item 0 = apple, item 1 = orange`
+        
+
+---
+
+6. **Why use Loops?**
+    
+    - **Saves time** → instead of writing 10 separate tasks, loop through 1 task with 10 items.
+        
+    - **Dynamic** → works with variables and lists.
+        
+    - **Clean playbooks** → easier to read and maintain.
+        
+
+---
+
+✅ In short:
+
+- `loop:` lets you repeat tasks for each item in a list.
+    
+- You can use variables, control index, rename loop variable, and even customize labels.

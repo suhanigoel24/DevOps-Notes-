@@ -200,8 +200,11 @@
   },
   "active": "8c1b50011d6dc4f6",
   "lastOpenFiles": [
-    "Ansible/ANSIBLE.md",
+    "CLOUD COMPUTING.md",
+    "GIT AND GITHUB.md",
+    "JENKINS.md",
     "Ansible/Lab Setup & First Playbook.md",
+    "Ansible/ANSIBLE.md",
     "Untitled",
     "Prometheus/Prometheus what i understand.md",
     "Ansible/Screenshot 2025-09-22 at 4.45.20 PM.png",
@@ -224,7 +227,6 @@
     "2025-09-17.md",
     "Prometheus",
     "DOCKER.md",
-    "GIT AND GITHUB.md",
     "Untitled 1.canvas",
     "Untitled 2.canvas",
     "Untitled 3.canvas",
@@ -232,14 +234,12 @@
     "2025-09-15.md",
     "push_notes.sh",
     "NETWORKING AND SECURITY.md",
-    "CLOUD COMPUTING.md",
     "INFRASTRUCTURE AS A C0DE (IaC).md",
     "NGINX.md",
     "REDIS.md",
     "KAFKA.md",
     "ISTIO.md",
     "TERRAFORM.md",
-    "ROADMAP TO DEVOPS.md",
-    "AWS SERVICES.md"
+    "ROADMAP TO DEVOPS.md"
   ]
 }
