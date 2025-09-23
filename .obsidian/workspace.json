@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prometheus/Telegraph.md",
+                "file": "Ansible/ANSIBLE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Telegraph"
+              "title": "ANSIBLE"
             }
           },
           {
@@ -183,19 +183,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "5c298171fcd90255",
+  "active": "ceb7d1f1ba27533d",
   "lastOpenFiles": [
+    "Prometheus/Prometheus what i understand.md",
+    "Ansible/ANSIBLE.md",
+    "Ansible/Screenshot 2025-09-22 at 4.45.20 PM.png",
+    "Prometheus/Telegraph.md",
     "Prometheus/Prometheus Configuration.md",
     "Prometheus/Prometheus rules.md",
     "Prometheus/Introduction, Working and Architecture.md",
     "Prometheus/Prometheus and alertmanager.md",
-    "Prometheus/Prometheus what i understand.md",
-    "Prometheus/Telegraph.md",
     "Untitled 3",
-    "Screenshot 2025-09-15 at 5.09.52 PM.png",
+    "Prometheus/Screenshot 2025-09-15 at 5.09.52 PM.png",
     "Untitled 2",
     "Untitled 1",
-    "Untitled",
+    "Ansible",
     "Prometheus/Alertmanager Configuration file.md",
     "Prometheus/Prometheus.yaml.md",
     "Prometheus/Metric Names and Labels.md",
@@ -209,7 +211,6 @@
     "Untitled 1.canvas",
     "Untitled 2.canvas",
     "Untitled 3.canvas",
-    "ANSIBLE.md",
     "KUBERNETES.md",
     "2025-09-15.md",
     "push_notes.sh",
@@ -222,7 +223,6 @@
     "ISTIO.md",
     "TERRAFORM.md",
     "ROADMAP TO DEVOPS.md",
-    "AWS SERVICES.md",
-    "JENKINS.md"
+    "AWS SERVICES.md"
   ]
 }
