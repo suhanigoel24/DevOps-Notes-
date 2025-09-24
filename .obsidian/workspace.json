@@ -139,7 +139,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AWX (Ansible GUI).md",
+                "file": "Ansible/AWX (Ansible GUI).md",
                 "mode": "source",
                 "source": false
               },
@@ -310,10 +310,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "a31cb10c810911f9",
+  "active": "5c298171fcd90255",
   "lastOpenFiles": [
     "Ansible/Ansible Vault.md",
-    "AWX (Ansible GUI).md",
+    "Ansible/AWX (Ansible GUI).md",
     "Ansible/Ansible Roles.md",
     "Ansible/Lab Setup & First Playbook.md",
     "Ansible/Ansible Introduction.md",
