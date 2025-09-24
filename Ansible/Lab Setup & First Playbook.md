@@ -402,11 +402,7 @@ loop_control:
         - Change how loop results are displayed:
             
         
-```
-loop_control:
-  label: "{{ index }}"
-
-```
+      
         
         Output becomes:  
         `item 0 = apple, item 1 = orange`
