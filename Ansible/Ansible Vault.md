@@ -20,7 +20,14 @@
     
     - Example:
         
-        `- name: Vault Demo   hosts: windows_servers   tasks:     - name: Ping server       win_ping:`
+```
+- name: Vault Demo
+  hosts: windows_servers
+  tasks:
+    - name: Ping server
+      win_ping:
+
+```
         
     - Purpose: Check if the connection and inventory are working properly before encryption.
         
@@ -82,7 +89,16 @@
 
 1. **Convert inventory to YAML format** (required for encrypted strings):
     
-    `win_servers:   hosts:     server1:       ansible_user: Administrator       ansible_password: !vault |         $ANSIBLE_VAULT;1.1;AES256         <encrypted_string_here>`
+```
+win_servers:
+  hosts:
+    server1:
+      ansible_user: Administrator
+      ansible_password: !vault |
+        $ANSIBLE_VAULT;1.1;AES256
+        <encrypted_string_here>
+
+```
     
 2. **Test Playbook with YAML inventory**
     
