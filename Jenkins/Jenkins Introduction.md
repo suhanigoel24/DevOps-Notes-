@@ -43,6 +43,8 @@
 
 ## 3. DevOps Introduction
 
+DevOps is a set of practices hat combines software development and IT operations. It aims to shorten the systems development cycle and provides continuous delivery with high software quality.
+
 - Still, another problem remained:  
     Code worked on the **developer’s machine** but often failed in **production**.
     
@@ -127,6 +129,6 @@ This cycle repeats **every time new code is written**.
 
 ---
 
- In short:  
+### In short:  
 Earlier, software was developed and tested in large chunks → slow and risky.  
 With **DevOps**, the process is **automated, continuous, and iterative**, reducing bugs, improving speed, and keeping clients happy.
