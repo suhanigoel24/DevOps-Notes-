@@ -174,9 +174,93 @@
               "icon": "lucide-file",
               "title": "Akamai"
             }
+          },
+          {
+            "id": "1c076205bfc25691",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Jenkins/Installation of jenkins.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Installation of jenkins"
+            }
+          },
+          {
+            "id": "ddd8af08a1fbfd1c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Jenkins/Installation of jenkins.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Installation of jenkins"
+            }
+          },
+          {
+            "id": "310087638128619a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Jenkins/Jenkins – Managing Plugins & Customizing Interface**.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Jenkins – Managing Plugins & Customizing Interface**"
+            }
+          },
+          {
+            "id": "d87d9aba4ab97559",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Adding new user to a server (script).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Adding new user to a server (script)"
+            }
+          },
+          {
+            "id": "c0cc535183b2d224",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Patching.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Patching"
+            }
+          },
+          {
+            "id": "2c9de4661753f200",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "AMI - Introduction.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AMI - Introduction"
+            }
           }
         ],
-        "currentTab": 11
+        "currentTab": 17
       }
     ],
     "direction": "vertical"
@@ -324,10 +408,28 @@
       "bases:Create new base": false
     }
   },
-  "active": "4edc13ec3d548935",
+  "active": "2c9de4661753f200",
   "lastOpenFiles": [
-    "Jenkins/Jenkins Introduction.md",
+    "Patching.md",
+    "AMI - Introduction.md",
+    "Amazon Web Services/AMI",
+    "Adding new user to a server (script).md",
+    "Untitled 9",
+    "Untitled 8",
+    "Untitled 7",
+    "Untitled 6",
+    "Untitled 5",
+    "Amazon Web Services",
+    "Untitled 3",
+    "Untitled 2",
+    "Jenkins/Jenkins – Managing Plugins & Customizing Interface**.md",
+    "Jenkins/Jenkins Dashboard & Search Bar Tutorial & Configure System.md",
+    "Jenkins/Installation of jenkins.md",
+    "Untitled 1",
     "Akamai.md",
+    "Ansible/Lab Setup & First Playbook.md",
+    "Create First Jenkins Job.md",
+    "Jenkins/Jenkins Introduction.md",
     "Linux/Linux Package Management.md",
     "Linux/Linux Filesystem Heirarchy.md",
     "Linux/What is a shell?.md",
@@ -335,37 +437,19 @@
     "Screenshot 2025-09-26 at 3.28.23 PM.png",
     "Linux/Linux Core Concepts.md",
     "Linux/Bash Shell.md",
-    "Untitled",
     "Linux/Basic Linux Commands.md",
     "Linux/File Permission and Ownership.md",
-    "Linux",
-    "Jenkins/Untitled 1.md",
-    "Jenkins",
     "JENKINS.md",
     "Terraform/AWS VPC using Terraform.md",
-    "Terraform/Untitled",
-    "Ansible/Lab Setup & First Playbook.md",
     "Prometheus/Prometheus and alertmanager.md",
     "Ansible/AWX (Ansible GUI).md",
     "Ansible/Ansible Vault.md",
     "Ansible/Ansible Roles.md",
     "Ansible/Jira Integration with ansible.md",
     "Ansible/Rest API with ansible.md",
-    "Ansible/Email Automation and Templating.md",
-    "Ansible/Ansible Variables and Registers.md",
-    "Ansible/Ansible Playbook Switches (NC Switches).md",
-    "Ansible/Ansible Introduction.md",
-    "Terraform",
     "Terraform/Screenshot 2025-09-25 at 12.27.22 PM.png",
     "Ansible/Screenshot 2025-09-22 at 4.45.20 PM.png",
-    "CLOUD COMPUTING.md",
-    "GIT AND GITHUB.md",
-    "Untitled 3",
     "Prometheus/Screenshot 2025-09-15 at 5.09.52 PM.png",
-    "Untitled 2",
-    "Untitled 1",
-    "Ansible",
-    "Untitled 1.base",
     "Untitled.canvas",
     "Untitled 1.canvas",
     "Untitled 2.canvas",
