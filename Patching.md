@@ -1,4 +1,4 @@
-### ⚙️ **Typical Steps for Patching a Linux Server**
+c### ⚙️ **Typical Steps for Patching a Linux Server**
 
 #### **1️⃣ SSH into the server**
 
