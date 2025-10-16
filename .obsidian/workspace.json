@@ -279,12 +279,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Jenkins/Installation of jenkins.md",
+                "file": "Amazon Web Services/AMI/Packer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Installation of jenkins"
+              "title": "Packer"
             }
           }
         ],
@@ -438,12 +438,13 @@
   },
   "active": "9948e866af34a393",
   "lastOpenFiles": [
+    "AWS SERVICES.md",
+    "Amazon Web Services/AMI/Packer.md",
+    "Jenkins/Installation of jenkins.md",
     "Jenkins/Jenkins Dashboard & Search Bar Tutorial & Configure System.md",
     "Jenkins/Jenkins – Managing Plugins & Customizing Interface**.md",
-    "Jenkins/Installation of jenkins.md",
     "Jenkins/Jenkins Introduction.md",
     "Amazon Web Services/AMI/AMI - Introduction.md",
-    "Amazon Web Services/AMI/Packer.md",
     "Patching.md",
     "Jenkins pipeline explanation with service onboarding.md",
     "Amazon Web Services/AMI",
@@ -474,7 +475,6 @@
     "Prometheus/Prometheus and alertmanager.md",
     "Ansible/AWX (Ansible GUI).md",
     "Ansible/Ansible Vault.md",
-    "Ansible/Ansible Roles.md",
     "Terraform/Screenshot 2025-09-25 at 12.27.22 PM.png",
     "Ansible/Screenshot 2025-09-22 at 4.45.20 PM.png",
     "Prometheus/Screenshot 2025-09-15 at 5.09.52 PM.png",
